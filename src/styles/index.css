@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #08060b;
+  color: #f5e6ca;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Gold & Pink Neon Text Glow */
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7),
+               0 0 25px rgba(255, 193, 7, 0.5),
+               0 0 45px rgba(255, 160, 0, 0.3);
+}
+
+.text-glow-pink {
+  text-shadow: 0 0 10px rgba(255, 117, 143, 0.8),
+               0 0 25px rgba(255, 158, 170, 0.6),
+               0 0 50px rgba(255, 75, 120, 0.4);
+}
+
+/* Glassmorphism Luxury Styling */
+.glass-panel {
+  background: rgba(18, 13, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 215, 0, 0.18);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-pink {
+  background: rgba(26, 14, 25, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 158, 170, 0.22);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6),
+              inset 0 1px 0 0 rgba(255, 200, 215, 0.15);
+}
+
+/* Golden Shimmer Button */
+.gold-gradient-btn {
+  background: linear-gradient(135deg, #FFE082 0%, #FFC107 50%, #B8860B 100%);
+  color: #08060B;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(255, 193, 7, 0.4),
+              0 0 10px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gold-gradient-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(255, 193, 7, 0.65),
+              0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08060b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a1f38;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dfac46;
+}
+
+/* Candle flame flickering */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+  }
+  25% {
+    transform: scale(1.1, 1.15) rotate(2deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.95, 0.9) rotate(-2deg);
+    opacity: 0.85;
+  }
+  75% {
+    transform: scale(1.05, 1.1) rotate(1deg);
+    opacity: 1;
+  }
+}
+
+.candle-flame {
+  animation: flameFlicker 1.2s infinite ease-in-out alternate;
+  filter: drop-shadow(0 0 8px #ffb300) drop-shadow(0 0 18px #ff758f);
+}
+
+/* Floating animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 4s ease-in-out infinite;
+}
